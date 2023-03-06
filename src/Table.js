@@ -29,7 +29,7 @@ export default function Table1() {
         }
       )
   }
-
+  
   const UserDelete = id => {
     var requestOptions = {
       method: 'DELETE',
@@ -50,7 +50,7 @@ export default function Table1() {
           <Box display="flex">
             <Box sx={{ flexGrow: 1 }}>
               <Typography variant="h6" gutterBottom>
-                Users
+                Draft
               </Typography></Box>
             <Box>
               <Link href="createApi">
@@ -88,7 +88,11 @@ export default function Table1() {
 
                     <TableCell align="right">
                       <ButtonGroup variant="outlined" aria-label="outlined button group">
-                        <Button>EDIT</Button>
+                        {/* <Link href="editApi" >
+                          <Button  variant="contained" >
+                            EDIT
+                          </Button>
+                        </Link>  */}
                         <Button onClick={() => UserDelete(row.id)}>DEL</Button>
                       </ButtonGroup>
                     </TableCell>
